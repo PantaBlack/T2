@@ -18,7 +18,17 @@ namespace T2_Naranjo_Gianino.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult DistribuidoresPeru()
+        {
+            return View();
+        }
+
+        public IActionResult DistribuidoresMundo()
+        {
+            return View();
+        }
+
+        public IActionResult Distribucion()
         {
             return View();
         }
@@ -26,7 +36,10 @@ namespace T2_Naranjo_Gianino.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel
+            {
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            });
         }
     }
 }
