@@ -1,0 +1,113 @@
+﻿@model T2_Naranjo_Gianino.Models.Distribuidor
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h2 class="text-primary">Editar Distribuidor</h2>
+
+<form method="post" asp-action="Editar">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="border p-3">
+
+        <div asp-validation-summary="ModelOnly"
+             class="text-danger">
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="NombreDistribuidor"
+                   class="form-label">
+            </label>
+
+            <input asp-for="NombreDistribuidor"
+                   class="form-control" />
+
+            <span asp-validation-for="NombreDistribuidor"
+                  class="text-danger">
+            </span>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="RazonSocial"
+                   class="form-label">
+            </label>
+
+            <input asp-for="RazonSocial"
+                   class="form-control" />
+
+            <span asp-validation-for="RazonSocial"
+                  class="text-danger">
+            </span>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="Telefono"
+                   class="form-label">
+            </label>
+
+            <input asp-for="Telefono"
+                   class="form-control" />
+
+            <span asp-validation-for="Telefono"
+                  class="text-danger">
+            </span>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="AnioInicioOperacion"
+                   class="form-label">
+            </label>
+
+            <input asp-for="AnioInicioOperacion"
+                   class="form-control" />
+
+            <span asp-validation-for="AnioInicioOperacion"
+                  class="text-danger">
+            </span>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="Contacto"
+                   class="form-label">
+            </label>
+
+            <input asp-for="Contacto"
+                   class="form-control" />
+
+            <span asp-validation-for="Contacto"
+                  class="text-danger">
+
+            </span>
+
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary">
+
+            Guardar Cambios
+        </button>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+
+            Regresar
+        </a>
+
+    </div>
+
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
